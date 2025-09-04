@@ -1,0 +1,35 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+healthcheckPath = "/health"
+healthcheckTimeout = 300
+restartPolicyType = "always"
+
+[[services]]
+name = "music-bot"
+
+[services.source]
+repo = "Utkarsh-py/TGmusic"
+branch = "main"
+
+[services.variables]
+API_ID = "${{ API_ID }}"
+API_HASH = "${{ API_HASH }}"
+BOT_TOKEN = "${{ BOT_TOKEN }}"
+ADMIN_USERS = "${{ ADMIN_USERS }}"
+SESSION_NAME = "railway_music_bot"
+LOG_LEVEL = "INFO"
+
+[[services]]
+name = "postgres"
+source.image = "postgres:15"
+
+[services.variables]
+POSTGRES_DB = "musicbot"
+POSTGRES_USER = "musicbot"
+POSTGRES_PASSWORD = "${{ POSTGRES_PASSWORD }}"
+
+[[services]]
+name = "redis"
+source.image = "redis:7-alpine"
