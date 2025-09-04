@@ -1,0 +1,55 @@
+{
+  "name": "Telegram Music Bot",
+  "description": "Advanced Telegram bot for streaming music and videos in voice chats with premium features",
+  "repository": "https://github.com/yourusername/telegram-music-bot",
+  "logo": "https://raw.githubusercontent.com/yourusername/telegram-music-bot/main/logo.png",
+  "keywords": [
+    "telegram",
+    "bot",
+    "music",
+    "streaming",
+    "voice-chat",
+    "python",
+    "pytgcalls"
+  ],
+  "stack": "container",
+  "env": {
+    "API_ID": {
+      "description": "Get this from https://my.telegram.org",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this from https://my.telegram.org",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Get this from @BotFather on Telegram",
+      "required": true
+    },
+    "SESSION_NAME": {
+      "description": "Session name for the bot",
+      "value": "music_bot",
+      "required": false
+    },
+    "ADMIN_USERS": {
+      "description": "Comma-separated list of admin user IDs",
+      "required": true
+    },
+    "LOG_LEVEL": {
+      "description": "Logging level",
+      "value": "INFO",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "buildpacks": [],
+  "addons": [
+    "heroku-postgresql:mini",
+    "heroku-redis:mini"
+  ]
+}
