@@ -46,7 +46,7 @@ A powerful Telegram bot that can stream high-quality music and videos in real-ti
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/Utkarsh-py/TGmusic.git
-cd telegram-music-bot
+cd TGmusic
 ```
 
 ### 2. Install Dependencies
@@ -78,8 +78,8 @@ python main.py
 ### Using Docker Compose (Recommended)
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/telegram-music-bot.git
-cd telegram-music-bot
+git clone https://github.com/Utkarsh-py/TGmusic
+cd TGmusic
 
 # Configure environment
 cp .env.example .env
@@ -92,7 +92,7 @@ docker-compose up -d
 ### Using Docker
 ```bash
 # Build image
-docker build -t telegram-music-bot .
+docker build -t TGmusic .
 
 # Run container
 docker run -d \
@@ -132,8 +132,8 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install python3 python3-pip ffmpeg git -y
 
 # Clone repository
-git clone https://github.com/yourusername/telegram-music-bot.git
-cd telegram-music-bot
+git clone https://github.com/Utkarsh-py/TGmusic
+cd TGmusic
 
 # Install Python dependencies
 pip3 install -r requirements.txt
@@ -155,7 +155,7 @@ After=network.target
 [Service]
 Type=simple
 User=ubuntu
-WorkingDirectory=/home/ubuntu/telegram-music-bot
+WorkingDirectory=/home/ubuntu/TGmusic
 ExecStart=/usr/bin/python3 main.py
 Restart=always
 RestartSec=10
