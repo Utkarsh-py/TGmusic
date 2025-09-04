@@ -1,0 +1,11 @@
+build:
+  docker:
+    worker: Dockerfile
+
+run:
+  worker: python main.py
+
+release:
+  image: worker
+  command:
+    - python -c "print('Setting up database...'); import sqlite3; conn = sqlite3.connect('bot_data.db'); conn.close()"
