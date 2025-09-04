@@ -45,7 +45,7 @@ A powerful Telegram bot that can stream high-quality music and videos in real-ti
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/telegram-music-bot.git
+git clone https://github.com/Utkarsh-py/TGmusic.git
 cd telegram-music-bot
 ```
 
